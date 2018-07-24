@@ -12,39 +12,14 @@ import store from '../store/store.js';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-
-    // this.state = {
-    //   videos: [],
-    //   currentVideo: null
-    // };
   }
 
   componentDidMount() {
-    // this.getYouTubeVideos('react tutorials');
     store.dispatch(changeVideo(exampleVideoData[0]));
     store.dispatch(changeVideoList(exampleVideoData));
   }
 
-  // handleVideoListEntryTitleClick(video) {
-  //   this.setState({currentVideo: video});
-  // }
-  // 
-  // getYouTubeVideos(query) {
-  //   var options = {
-  //     key: this.props.API_KEY,
-  //     query: query
-  //   };
-  // 
-  //   this.props.searchYouTube(options, (videos) =>
-  //     this.setState({
-  //       videos: videos,
-  //       currentVideo: videos[0]
-  //     })
-  //   );
-  // }
 
-  //TODO: swap out the React components below for the container components
-  //  you wrote in the 'containers' directory.
   render() {
     return (
       <div>
@@ -56,7 +31,7 @@ export default class App extends React.Component {
           <div className="col-md-5">
             <VideoListContainer />
           </div>
-        </div>  
+        </div>
       </div>
     );
   }
